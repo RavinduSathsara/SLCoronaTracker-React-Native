@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
     borderRadius: 20 / 2,
   },
 
-  txt: {fontSize: 20, padding: 10},
+  txt: {fontSize: 20, textAlign: 'center', marginTop: 20},
 
-  num: {fontSize: 40, padding: 2},
+  num: {fontSize: 40, textAlign: 'center', marginTop: 15},
 });
 
 export default styles;
