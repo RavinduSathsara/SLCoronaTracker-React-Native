@@ -14,11 +14,11 @@ const baseUrl = 'https://www.hpb.health.gov.lk/api/get-current-statistical';
 const App = () => {
   const [items, setItems] = useState(data);
 
-  async function callApi() {
-    axios.get(baseUrl).then(response => {
-      setItems(response.data);
-    });
-  }
+  const callApi = async () => {
+    const result = await axios.get(baseUrl);
+    setItems(result.data);
+    console.log(result);
+  };
 
   useEffect(() => {
     callApi();
@@ -28,8 +28,8 @@ const App = () => {
     <View>
       <Header />
       <View style={styles.container}>
-        <LocalDeaths local_deaths={items.data.local_deaths} />
         <NewDeaths local_new_deaths={items.data.local_new_deaths} />
+        <LocalDeaths local_deaths={items.data.local_deaths} />
       </View>
     </View>
   );
