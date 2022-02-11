@@ -5,7 +5,7 @@ const data = {
     local_total_cases: 621985,
     local_total_number_of_individuals_in_hospitals: 22180,
     local_deaths: 15656,
-    local_new_deaths: 36,
+    local_new_deaths: 35,
     local_recovered: 582064,
     local_active_cases: 24265,
     global_new_cases: 510016,
